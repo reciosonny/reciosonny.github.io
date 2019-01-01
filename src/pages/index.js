@@ -6,6 +6,7 @@ const IndexPage = () => (
   <div>
       <h1>Personal Website of Sonny Recio</h1>
       <h2>Hello world!</h2>
+      <h2>Hello world too!</h2>
   </div>
 );
 
