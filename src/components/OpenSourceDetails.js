@@ -2,7 +2,7 @@ import React from 'react'
 
 import thumbnail from '../images/thumbnail.png'
 
-export default ({ name, img, shortDesc }) => {
+export default ({ name, img, shortDesc, url }) => {
   const imgFinal = img || thumbnail
 
   return (
@@ -20,7 +20,7 @@ export default ({ name, img, shortDesc }) => {
           </div>
           <div className="col-12">
             <a
-              href="https://github.com/reciosonny/reactwizardform"
+              href={url}
               target="_blank"
               className="button"
             >

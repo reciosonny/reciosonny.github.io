@@ -27,6 +27,7 @@ import '../styles/layout.css';
 import '../styles/simple-grid.css';
 
 import '@fortawesome/fontawesome-free/css/all.css';
+import openSourceProjectsDB from '../DB/openSourceProjectsDB';
 
 
 const Intent = ({ name }) => (
@@ -157,13 +158,14 @@ class IndexPage extends React.Component {
         img={project.img}
       />
     ));
-    const OpenSourceProjects = projectDetailsDB.map(project => (
+    const OpenSourceProjects = openSourceProjectsDB.map(project => (
       <OpenSourceDetails
         key={project.id}
         onClick={this.showModal}
         name={project.name}
         shortDesc={project.shortDesc}
         img={project.img}
+        url={project.url}
       />
     ));
 

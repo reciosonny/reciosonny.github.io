@@ -18,6 +18,7 @@ const ProjectDetails = ({ onClick, name, img, shortDesc }) => {
           <div className="col-12 text-center">
             <div className="project-details">{shortDesc}</div>
           </div>
+          
           {/* <div className="col-12">
             <button onClick={onClick}>VIEW PROJECT</button>
           </div> */}

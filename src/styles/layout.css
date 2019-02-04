@@ -12,7 +12,7 @@
     font-style: italic;
 }
 
-
+/* DEFAULTS */
 body, .body {
     margin-left: 15em;
     background: #1f1f1f;
@@ -27,6 +27,12 @@ i {
     font-size: 1.5em;
     cursor: pointer;
 }
+
+.slick-arrow {
+    font-style: normal;
+}
+
+/* END */
 
 .text-center {
     text-align: center;
@@ -202,7 +208,7 @@ button, .button {
     color: #ffffff;
     transition: background 0.4s, color 0.4s;
 }
-button:hover {
+button:hover, a.button:hover {
     background: #fff;
     color: #1d1d1d;
 }
@@ -213,6 +219,9 @@ button:focus {
 a.button {
     text-decoration: none;
     display: inline-block;
+}
+a.button:hover span {
+    color: #1d1d1d;
 }
 a span {
     margin-top: 8px;
@@ -354,4 +363,38 @@ a span {
     100% {
         transform: scale(1)
     }
+}
+
+
+/* Badges here.. */
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.badge-pill {
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+}
+
+.badge-primary {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+.badge-info {
+    color: #fff;
+    background-color: #17a2b8;
 }
