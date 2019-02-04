@@ -1,0 +1,357 @@
+
+@font-face {
+    font-family: 'Dank Mono Regular';
+    src: url('../fonts/DankMono-Regular.otf'),
+         url('../fonts/DankMono-Italic.otf'), /* Super Modern Browsers */
+}
+
+* {
+    /* font-family: 'Lato', Helvetica, sans-serif; */
+    font-family: 'Dank Mono Regular';
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+body, .body {
+    margin-left: 15em;
+    background: #1f1f1f;
+}
+
+h1, h2, h3, p, div, span {
+    color: #fff;
+}
+
+i {
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.title-font {
+    font-size: 80px;
+}
+
+.content-bar {
+    background: #ed6464;
+    height: 6px;
+}
+
+.title-header {
+    margin-left: -4em !important;
+}
+.intent-header {
+    margin-left: -4em !important;
+    margin-top: 5em !important;
+}
+
+.intent-header > h1 {
+    transform: rotate(-20deg);
+    font-size: 60px;
+}
+
+.intent-content {
+    padding-top: 4em;
+}
+
+div > p {
+    padding-right: 12em;
+}
+
+.element { 
+    position: fixed;
+    top: 30%;
+    left: 6%;
+}
+
+.service-desc {
+    padding-top: 25px;
+}
+
+.tech-stacks-div {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.img-nodejs {
+    padding-top: 50px;
+}
+.img-nodejs > div:nth-child(2) {
+    margin-top: -40px;
+}
+.bg-image-overlay, .bg-image-details-overlay {
+    display: none;
+}
+.bg-image-details-overlay > div {
+    margin-top: 2em;
+}
+
+.img-project {
+    position: relative;
+    height: 300px;
+}
+/*
+    show child div on mouse hover: 
+        - https://stackoverflow.com/questions/6305141/show-child-div-on-mouse-hover-of-parent-needs-javascript
+*/
+.img-project:hover .bg-image-overlay {
+    height: 100%;
+    width: 100%;
+    background: black;
+    position: absolute;
+    /* opacity: 0.8; */
+    top: 0;
+    display: block;
+
+    animation: fadeinImageOverlay 0.4s forwards;
+}
+.img-project:hover .bg-image-details-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: block;
+    background: none;
+    z-index: 100;
+}
+
+.img-project:hover .bg-image-details-overlay div div button {
+    animation: buttonimageoverlay 0.4s forwards;
+}
+.img-project:hover .bg-image-details-overlay div div h1 {
+    animation: projecttitle 0.4s forwards;
+}
+
+.img-project div.gatsby-image-wrapper picture img, picture img, img {
+    -moz-transition: all 0.3s !important;
+    -webkit-transition: all 0.3s !important;
+    transition: all 0.3s !important;
+}
+
+.img-project:hover div.gatsby-image-wrapper picture img {
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);  
+}
+
+.project-details {
+    padding: 0 20px 0 20px;
+}
+
+.img-project:hover div.bg-image-details-overlay div.row div:nth-child(2) div.project-details {
+    animation: animateProjectDetails 0.4s forwards;
+}
+
+@keyframes animateProjectDetails {
+    0% {
+        -moz-transform: scale(0);
+        -webkit-transform: scale(0);
+        transform: scale(0);    
+    }
+    50% {
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);    
+    }
+    100% {
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);      
+    }
+}
+
+
+@keyframes fadeinImageOverlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+
+@keyframes buttonimageoverlay {
+    from {
+        transform: translateY(30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes projecttitle {
+    from {
+        transform: translateY(-30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+
+button, .button {
+    background: none;
+    border: 2px solid #ffffff;
+    height: 40px;
+    width: 150px;
+    color: #ffffff;
+    transition: background 0.4s, color 0.4s;
+}
+button:hover {
+    background: #fff;
+    color: #1d1d1d;
+}
+button:focus {
+    outline: none;
+    /* box-shadow: 0px 2px 16px 3px #888888; */
+}
+a.button {
+    text-decoration: none;
+    display: inline-block;
+}
+a span {
+    margin-top: 8px;
+    display: inline-block;
+}
+
+.btn-hire-me {
+    font-size: 20px;
+    font-style: normal;
+    transition: all 0.3s !important;
+}
+.btn-hire-me:hover {
+    transform: scale(2);
+}
+
+
+@keyframes btnFadeIn {
+    from {
+        background: none;
+        color: #fff;
+    }
+    to {
+        background: #fff;
+        color: #1d1d1d;
+    }
+}
+
+.bg-green {
+    background: green;
+    font-style: italic;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    /* background-color: #fefefe; */
+    background-color: #ed6464;
+    margin: auto;
+    padding: 0;
+    /* border: 1px solid #888; */
+    width: 40%;
+    height: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    border-radius: 10px;
+}
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    /* background-color: #5cb85c; */
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    /* background-color: #5cb85c; */
+    color: white;
+  }
+
+  .img-client {
+    height: 250px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+
+.profile-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    animation: animateProfileImage 0.7s forwards;
+}
+
+
+@keyframes animateProfileImage {
+    0% {
+        transform: scale(0)
+    }
+    50% {
+        transform: scale(1.5)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
