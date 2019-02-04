@@ -10,9 +10,6 @@ import NodeImage from '../components/images/nodeImg'
 import LaravelImage from '../components/images/laravelImage'
 import Image from '../components/image'
 
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import 'slick-carousel/slick/slick.js'
 import ProjectDetails from '../components/ProjectDetails'
 import ClientTestimonies from '../components/ClientTestimonies'
 
@@ -21,6 +18,16 @@ import projectDetailsDB from '../DB/projectDetailsDB'
 import OpenSourceDetails from '../components/OpenSourceDetails'
 
 import imgSonny from '../images/sonny.jpg'
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.js';
+
+import '../styles/layout.css';
+import '../styles/simple-grid.css';
+
+import '@fortawesome/fontawesome-free/css/all.css';
+
 
 const Intent = ({ name }) => (
   <div className="row">
