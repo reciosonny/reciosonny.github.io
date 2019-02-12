@@ -28,6 +28,7 @@ import '../styles/simple-grid.css';
 
 import '@fortawesome/fontawesome-free/css/all.css';
 import openSourceProjectsDB from '../DB/openSourceProjectsDB';
+import socialDB from '../DB/socialDB';
 
 
 const Intent = ({ name }) => (
@@ -59,6 +60,14 @@ const ImgLoader = ({ name, imgComponent, classNames }) => {
     </div>
   )
 }
+
+const Social = ({ link, iconClass }) => (
+    <div className="col-12">
+        <a href={`${link}`} target="_blank">
+            <i className={`${iconClass}`}></i>
+        </a>
+    </div>
+);
 
 const jobTitles = [
   'Fullstack Web Developer',
@@ -176,36 +185,12 @@ class IndexPage extends React.Component {
         testimony={client.testimony}
         image={client.image}
       />
-    ))
+    ));
+
+    const Socials = socialDB.map(x => <Social link={x.link} iconClass={x.iconClass} />);
 
     return (
       <div className="body">
-        <div
-          id="myModal"
-          className="modal"
-          style={{ display: this.state.displayModal }}
-          ref={this.modalRef}
-        >
-          <div className="modal-content">
-            <div className="modal-header">
-              <span
-                className="close"
-                onClick={() => this.setState({ displayModal: 'none' })}
-              >
-                &times;
-              </span>
-              <h2>Modal Header</h2>
-            </div>
-            <div className="modal-body">
-              <p>Some text in the Modal Body</p>
-              <p>Some other text...</p>
-            </div>
-            <div className="modal-footer">
-              <h3>Modal Footer</h3>
-            </div>
-          </div>
-        </div>
-
         <nav className="row">
           <div className="col-12">
             <h1>Sonny Recio</h1>
@@ -214,36 +199,7 @@ class IndexPage extends React.Component {
 
         <div className="element">
             <div className="row">
-                <div className="col-12">
-                    <a href="https://twitter.com/YellowFlashDev" target="_blank">
-                        <i class="fab fa-twitter-square"></i>
-                    </a>
-                </div>
-                <div className="col-12">
-                    <a href="https://www.instagram.com/yellowflashdev/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-                <div className="col-12">
-                    <a href="https://medium.com/@reciosonny" target="_blank">
-                        <i class="fab fa-medium"></i>
-                    </a>
-                </div>
-                <div className="col-12">
-                    <a href="https://github.com/reciosonny" target="_blank">                
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <div className="col-12">
-                    <a href="https://www.linkedin.com/in/sonny-recio-36819673" target="_blank">                
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-                <div className="col-12">
-                    <a href="https://stackoverflow.com/story/reciosonny" target="_blank">
-                        <i class="fab fa-stack-overflow"></i>
-                    </a>
-                </div>
+                {Socials}
             </div>
         </div>
 
@@ -306,6 +262,7 @@ class IndexPage extends React.Component {
               front-end technologies. I can also do NodeJS, Laravel for simple
               apps. For Enterprise Apps I'm more experienced in using ASP.net.
             </p>
+            <p>I can setup front-end stuffs using Webpack, Babel, NPM while including VueJS, React into the mix.</p>
             <p>
               Nowadays you'll see me focusing on front-end technologies such as
               VueJS, ReactJS, and constantly learning new and old ways in
@@ -406,4 +363,4 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage
+export default IndexPage;
