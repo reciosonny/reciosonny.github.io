@@ -18,8 +18,9 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
+        {children}
+
+        {/* <div
           style={{
             margin: `0 auto`,
             maxWidth: 960,
@@ -31,7 +32,7 @@ const Layout = ({ children }) => (
           <footer>
             © 2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
-        </div>
+        </div> */}
       </>
     )}
   />

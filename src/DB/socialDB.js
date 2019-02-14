@@ -23,5 +23,9 @@ export default [
         link: "https://stackoverflow.com/story/reciosonny",
         iconClass: "fab fa-stack-overflow"
     },
+    {
+        link: "https://codepen.io/reciosonny/",
+        iconClass: "fab fa-codepen"
+    }
 
 ];
