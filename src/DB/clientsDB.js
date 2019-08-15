@@ -1,5 +1,5 @@
 import codymiles from '../images/clients/codymiles.jpg';
-import smitty from '../images/clients/smitty.jpg';
+import marksurman from '../images/clients/marksurman.jpg';
 
 
 export default [
@@ -12,20 +12,13 @@ export default [
     {
         id: 2,
         name: "Mark Surman",
-        testimony: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ante eget felis bibendum venenatis. Nam auctor tortor ac enim auctor, at iaculis lorem consequat. Sed consectetur quam ut nunc sagittis suscipit. Vestibulum sit amet lectus maximus, aliquet tortor in, tincidunt nibh. Nam vitae orci in augue interdum gravida. Vestibulum tempor quis massa eget tempus.",
-        image: codymiles
+        testimony: "Will hire him again.",
+        image: marksurman
     },
     {
         id: 3,
-        name: "Smith Tanny",
-        testimony: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ante eget felis bibendum venenatis. Nam auctor tortor ac enim auctor, at iaculis lorem consequat. Sed consectetur quam ut nunc sagittis suscipit. Vestibulum sit amet lectus maximus, aliquet tortor in, tincidunt nibh. Nam vitae orci in augue interdum gravida. Vestibulum tempor quis massa eget tempus.",
-        image: smitty
-    },
-    {
-        id: 4,
-        name: "Matt Tew",
-        testimony: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae ante eget felis bibendum venenatis. Nam auctor tortor ac enim auctor, at iaculis lorem consequat. Sed consectetur quam ut nunc sagittis suscipit. Vestibulum sit amet lectus maximus, aliquet tortor in, tincidunt nibh. Nam vitae orci in augue interdum gravida. Vestibulum tempor quis massa eget tempus.",
-        image: codymiles
-    },
-    
+        name: "Albert Vigil",
+        testimony: "Will hire him again."
+    }
+
 ];
