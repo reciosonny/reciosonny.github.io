@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{494:function(s,d,e){"use strict";e.r(d),d.default=e.p+"assets/ashore.12e6f8194d080df9bd451d21fabd9789.jpg"}}]);

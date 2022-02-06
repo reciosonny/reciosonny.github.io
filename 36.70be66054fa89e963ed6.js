@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[36],{123:function(a,e,n){"use strict";n.r(e),e.default=n.p+"assets/angular.285e36a9e1b90e2345cb30bd673aad25.png"}}]);
