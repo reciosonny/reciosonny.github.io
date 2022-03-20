@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[61],{106:function(e,s,n){"use strict";n.r(s),s.default=n.p+"assets/vue.489361416839de379d55ac10cf732e40.png"}}]);
